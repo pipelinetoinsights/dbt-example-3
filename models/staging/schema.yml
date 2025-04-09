@@ -1,0 +1,52 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_order_items
+      - name: raw_products
+
+models:
+  - name: stg_customers
+    description: "Staged and cleaned customer data"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_orders
+    description: "Staged order data with status standardised"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: stg_order_items
+    description: "Staged data at the order item level"
+    columns:
+      - name: order_item_id
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: "Staged product information"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique

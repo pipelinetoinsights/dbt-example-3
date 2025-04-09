@@ -1,0 +1,12 @@
+dbt_post_3:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: 'your_user' # your Postgres username
+      password: 'your_password' # your Postgres password
+      port: 5432
+      dbname: 'your_db'  # name of your database
+      schema: 'your_schema' # name of your database schema
+      threads: 4

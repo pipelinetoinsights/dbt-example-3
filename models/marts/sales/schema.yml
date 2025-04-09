@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: mart_product_sales_summary
+    description: "Summary of total sales and revenue per product"
+    columns:
+      - name: product_id
+        tests: 
+          - not_null
+          - unique
+      - name: total_quantity_sold
+      - name: total_revenue
+      - name: last_updated_at

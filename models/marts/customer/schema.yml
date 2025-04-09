@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: mart_customer_lifetime_value
+    description: "Summarises each customer's lifetime order and spending behaviour"
+    columns:
+      - name: customer_id
+        tests: 
+          - not_null
+          - unique
+      - name: total_orders
+      - name: total_spent
+      - name: avg_order_value
+      - name: first_order_date
+      - name: last_order_date

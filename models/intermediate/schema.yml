@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_customer_orders
+    description: "Intermediate model with one row per customer order"
+    columns:
+      - name: order_id
+        tests: 
+          - not_null
+      - name: customer_id
+        tests: 
+          - not_null
+
+  - name: int_order_item_details
+    description: "Intermediate model with enriched order items and calculated totals"
+    columns:
+      - name: order_item_id
+        tests: 
+          - not_null 
+          - unique
+      - name: order_id
+        tests: 
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+      - name: item_total

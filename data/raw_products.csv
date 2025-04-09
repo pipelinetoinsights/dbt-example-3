@@ -1,0 +1,6 @@
+product_id,product_name,category,price,created_at
+101,Yoga Mat,Fitness,25.0,2025-04-05 03:16:29.802844
+102,Kettle Bell,Fitness,40.0,2025-04-06 03:16:29.802844
+103,Dumbbell Set,Fitness,60.0,2025-04-07 03:16:29.802844
+104,Treadmill,Cardio,300.0,2025-04-08 03:16:29.802844
+105,Exercise Bike,Cardio,250.0,2025-04-09 03:16:29.802844
